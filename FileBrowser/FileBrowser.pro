@@ -15,5 +15,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    byfoldercalculationstrategy.h \
+    bytypecalculationstrategy.h \
     calculationstrategy.h \
     calculator.h

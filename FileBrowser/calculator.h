@@ -7,7 +7,6 @@ class Calculator //Этот класс - контекст, который ссы
 {
 public:
     Calculator(CalculationStrategy* st) : strategy(st) {} //В конструктор передается ссылка на стратегию
-    ~Calculator() { delete strategy; } //деструктор
     void setStrategy(CalculationStrategy* str) { //сеттер для установки стратегии вычислений и возможности ее смены
         this->strategy = str; //т.е. мы указателю на стратегию присваиваем выбранную стратегию
     }
