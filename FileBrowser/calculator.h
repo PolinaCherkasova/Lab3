@@ -1,7 +1,7 @@
 #ifndef CALCULATOR_H
 #define CALCULATOR_H
 #include <QString>
-#include <QList>
+#include <QMap>
 #include <QPair>
 #include "calculationstrategy.h"
 #include <windows.h>
@@ -16,7 +16,7 @@ public:
         this->strategy = move(str); //т.е. мы указателю на стратегию присваиваем выбранную стратегию
         //move() используется для перемещения уникального указателя str в переменную-член this->strategy.
     }
-    QList<QPair<QString, QPair<int, int>>> calculate(QString path) //метод для передачи вычислений объекту-стратегии
+    QMap<QString, QPair<int, int>> calculate(QString path) //метод для передачи вычислений объекту-стратегии
     {
        return strategy->calculate(path); //вызов метода для конкретной стратегии, в который передается путь к директории
     }
